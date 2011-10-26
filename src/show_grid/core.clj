@@ -14,13 +14,16 @@
 	(let [result (str "<table border='1' width='100%'>" (tag data) "</table>")]
 		result))
 			
-(defn show-grid [data] 
-	(let [
-		editor-pane (JEditorPane. "text/html" (to-html data))
-		scroll-pane (JScrollPane. editor-pane)
-		frame (JFrame. "show-grid") ]
-			(doto frame
-				(.setSize 250 400)
-				(.setContentPane scroll-pane)
-				(.setVisible true)))
-				nil)
+(defn show-grid 
+	([data width height] 
+		(let [
+			editor-pane (JEditorPane. "text/html" (to-html data))
+			scroll-pane (JScrollPane. editor-pane)
+			frame (JFrame. "show-grid") ]
+				(doto frame
+					(.setSize width height)
+					(.setContentPane scroll-pane)
+					(.setVisible true)))
+					nil)
+	([data]
+		(show-grid 250 400)))
