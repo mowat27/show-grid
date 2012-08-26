@@ -26,4 +26,4 @@
 					(.setVisible true)))
 					nil)
 	([data]
-		(show-grid 250 400)))
+		(show-grid data 250 400)))
