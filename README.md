@@ -9,7 +9,7 @@ See https://clojars.org/show-grid for installation
 ```clojure
 (use 'show-grid.core)
 
-(show-grid {:foo "bar" :bop "baz")
+(show-grid {:foo "bar" :bop "baz"})
 ```
 
 
